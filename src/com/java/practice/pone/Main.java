@@ -19,11 +19,14 @@ public class Main {
             System.out.println("Fck off");
         }
 
+        //
+
         in.close();
 
         int y = in.nextInt();
         System.out.println(y);
 
+        //
 
         /*int array[] = {1, 2, 3, 4, 5};
 
@@ -59,5 +62,4 @@ public class Main {
             System.out.println();
         }
     }
-
 }
