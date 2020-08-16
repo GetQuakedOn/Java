@@ -4,6 +4,10 @@ public class Bus {
     private String color;
     private int speed;
 
+    public Bus() {
+        this.color = "None";
+        this.speed = 0;
+    }
 
     public Bus(String color) {
         this.color = color;

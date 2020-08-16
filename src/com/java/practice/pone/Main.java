@@ -1,26 +1,57 @@
 package com.java.practice.pone;
 
 import com.java.practice.pfour.TV;
+import com.java.practice.ptwo.Bus;
+import java.lang.Math;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        TV tv1 = new TV(true, 1, 70);
-        TV tv2 = new TV(false, 2, 50);
+        Scanner in = new Scanner(System.in);
+        System.out.println("In");
+        //int x = in.nextInt();
+        if (in.hasNextInt()) {
+            int x = in.nextInt();
+            System.out.println(x);
+        } else {
+            System.out.println("Fck off");
+        }
 
-        System.out.println("TV1 param");
-        tv1.GetParam();
+        in.close();
 
-        Spaces(1);
+        int y = in.nextInt();
+        System.out.println(y);
 
-        System.out.println("TV2 param");
-        tv2.GetParam();
 
-        Spaces(1);
+        /*int array[] = {1, 2, 3, 4, 5};
 
-        tv1.numOfChannel = tv2.numOfChannel;
-        tv1.GetParam();
+        for (int element: array) {
+            System.out.print(element + "\t");
+        }
+
+        Scanner in = new Scanner();
+
+        Spaces(2);
+
+        final int ROW = 3, COL = 5;
+
+        int arr[][] = new int[ROW][COL];
+
+        for (int i = 0; i < ROW; i++) {
+            for (int j = 0; j < COL; j++) {
+                arr[i][j] = (int) (Math.random() * 10);
+            }
+        }
+
+        for (int i = 0; i < ROW; i++) {
+            for (int j = 0; j < COL; j++) {
+                System.out.print(arr[i][j] + "\t");
+            }
+            Spaces(1);
+        }*/
+
     }
 
     public static void Spaces(int value) {
