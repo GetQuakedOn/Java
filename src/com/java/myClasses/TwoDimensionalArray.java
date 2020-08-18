@@ -5,13 +5,26 @@ import java.lang.Math;
 public class TwoDimensionalArray {
 
     private int ROW, COL;
-    public int arr[][];
+    private int arr[][];
 
     public TwoDimensionalArray(final int ROW, final int COL) {
         this.ROW = ROW;
         this.COL = COL;
 
         arr = new int[ROW][COL];
+    }
+
+    public TwoDimensionalArray(TwoDimensionalArray TDA) {
+        this.ROW = TDA.ROW;
+        this.COL = TDA.COL;
+
+        arr = new int[this.ROW][this.COL];
+
+        for (int i = 0; i < ROW; i++) {
+            for (int j = 0; j < COL; j++) {
+                arr[i][j] = TDA.arr[i][j];
+            }
+        }
     }
 
     public void FillArray(final int value) {
