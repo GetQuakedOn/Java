@@ -5,7 +5,7 @@ import java.lang.Math;
 public class TwoDimensionalArray {
 
     private int ROW, COL;
-    private int arr[][];
+    public int arr[][];
 
     public TwoDimensionalArray(final int ROW, final int COL) {
         this.ROW = ROW;

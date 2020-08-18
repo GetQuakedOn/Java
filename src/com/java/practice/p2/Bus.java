@@ -1,4 +1,4 @@
-package com.java.practice.ptwo;
+package com.java.practice.p2;
 
 public class Bus {
     private String color;

@@ -1,4 +1,4 @@
-package com.java.practice.pthree;
+package com.java.practice.p3;
 
 public class ForLoop {
 
