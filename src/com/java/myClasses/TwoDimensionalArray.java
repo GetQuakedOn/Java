@@ -14,11 +14,12 @@ public class TwoDimensionalArray {
         arr = new int[ROW][COL];
     }
 
+    //C-C
     public TwoDimensionalArray(TwoDimensionalArray TDA) {
         this.ROW = TDA.ROW;
         this.COL = TDA.COL;
 
-        arr = new int[this.ROW][this.COL];
+        this.arr = new int[this.ROW][this.COL];
 
         for (int i = 0; i < ROW; i++) {
             for (int j = 0; j < COL; j++) {
