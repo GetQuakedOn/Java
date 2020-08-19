@@ -1,17 +1,15 @@
 package com.java.practice.p1;
 
-import com.java.myClasses.TwoDimensionalArray;
-import com.java.practice.p4.TV;
-import com.java.practice.p5.*;
-import com.java.practice.p6.*;
+import com.java.practice.p7.Math;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Alex alex = new Alex();
-
+        Math.TwoDimensionalArray arr = Math.getTDA(3, 5);
+        arr.FillArray(10);
+        arr.ShowArray();
 
     }
 
