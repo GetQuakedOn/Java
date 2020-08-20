@@ -1,17 +1,17 @@
 package com.java.practice.p6;
 
-public class Alex extends Human {
+public class Employee extends Person {
 
     private int age;
 
-    public Alex(String name, int age) {
+    public Employee(String name, int age) {
         super(name);
         this.age = age;
     }
 
     @Override
     public void ShowInfo() {
-        super.ShowInfo();
+        System.out.println(super.getName());
         System.out.println(age);
     }
 }

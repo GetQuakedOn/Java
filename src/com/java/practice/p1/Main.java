@@ -2,13 +2,12 @@ package com.java.practice.p1;
 
 import com.java.practice.p6.*;
 
-
 public class Main {
 
     public static void main(String[] args) {
 
-        Alex alex = new Alex("Alex", 20);
-        alex.ShowInfo();
+        Client client = new Client("Vasya", 32, "vasya@email.com");
+        client.ShowInfo();
 
     }
 

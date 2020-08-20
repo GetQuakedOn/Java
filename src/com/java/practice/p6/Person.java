@@ -1,11 +1,15 @@
 package com.java.practice.p6;
 
-public class Human {
+public class Person {
 
     private String name;
 
-    public Human(String name) {
+    public Person(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void ShowInfo() {
