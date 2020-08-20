@@ -14,7 +14,7 @@ public class TwoDimensionalArray {
         arr = new int[ROW][COL];
     }
 
-    //C-C
+    //Copy
     public TwoDimensionalArray(TwoDimensionalArray TDA) {
         this.ROW = TDA.ROW;
         this.COL = TDA.COL;

@@ -2,13 +2,16 @@ package com.java.practice.p6;
 
 public class Alex extends Human {
 
-    public Alex() {
-        System.out.println("Alex's constructor");
+    private int age;
+
+    public Alex(String name, int age) {
+        super(name);
+        this.age = age;
     }
 
-    public void Walk() {
-        System.out.println("I'm walking");
+    @Override
+    public void ShowInfo() {
+        super.ShowInfo();
+        System.out.println(age);
     }
-
-    //
 }
