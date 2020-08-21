@@ -1,18 +1,23 @@
 package com.java.practice.p6;
 
-public class Person {
+public abstract class Person {
 
     private String name;
+    private int age;
 
-    public Person(String name) {
+    protected Person(String name, int age) {
         this.name = name;
+        this.age = age;
     }
 
     public String getName() {
         return name;
     }
 
-    public void ShowInfo() {
-        System.out.println(name);
+    public int getAge() {
+        return age;
     }
+
+    public abstract void ShowInfo();
+
 }

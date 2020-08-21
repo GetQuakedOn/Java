@@ -6,7 +6,7 @@ public class Math {
 
         private int num;
 
-        public Factorial(int num) {
+        private Factorial(int num) {
             this.num = num;
         }
 
@@ -22,7 +22,7 @@ public class Math {
         private int COL;
         private int arr[][];
 
-        public TwoDimensionalArray(int ROW, int COL) {
+        private TwoDimensionalArray(int ROW, int COL) {
             this.ROW = ROW;
             this.COL = COL;
 

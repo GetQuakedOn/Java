@@ -1,17 +1,22 @@
 package com.java.practice.p6;
 
-public class Client extends Employee {
+public class Client extends Person {
 
-    private String email;
+    private int wage;
 
-    public Client(String name, int age, String email) {
+    public Client(String name, int age, int wage) {
         super(name, age);
-        this.email = email;
+        this.wage = wage;
+    }
+
+    public int getWage() {
+        return wage;
     }
 
     @Override
     public void ShowInfo() {
-        super.ShowInfo();
-        System.out.println(email);
+        System.out.println("Name: " + super.getName());
+        System.out.println("Age: " + super.getAge());
+        System.out.println("Wage: " + wage);
     }
 }
