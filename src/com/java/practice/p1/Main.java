@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         Client client = new Client("Vasya", 32, "vasya@email.com");
-        client.ShowInfo();
+        System.out.println(isPalindrome("1234352"));
 
     }
 
@@ -15,5 +15,11 @@ public class Main {
         for (int i = 0; i < value; i++) {
             System.out.println();
         }
+    }
+
+    public static boolean isPalindrome(String text) {
+        return text.replaceAll("\\W","")
+                .equalsIgnoreCase(new StringBuilder(text.replaceAll("\\W",""))
+                        .reverse().toString());
     }
 }
