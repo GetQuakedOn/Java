@@ -1,10 +1,11 @@
 package com.java.practice.p1;
 
 import com.java.practice.p6.*;
-import com.java.practice.p7.Math;
 import com.java.practice.p8.Human;
 import com.java.practice.p8.MountainBicycle;
 import com.java.practice.p8.SimpleBicycle;
+import com.java.practice.p9.Machine;
+import com.java.practice.p9.Pistol;
 
 public class Main {
 
@@ -26,6 +27,15 @@ public class Main {
         Human human2 = new Human(mb);
         human2.TwistPedals();
         human2.Steer();
+        Space(4);
+
+        Machine america = new Machine("M16", 5.56f);
+        //america.Use();
+        Pistol pm = new Pistol("Makarov", 9.18f);
+        //pm.Use();
+        Space(1);
+        Human soldier = new Human(america);
+        System.out.println(soldier.getCaliber());
 
     }
 
