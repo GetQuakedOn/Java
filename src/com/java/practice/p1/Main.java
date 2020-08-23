@@ -1,17 +1,22 @@
 package com.java.practice.p1;
 
+import com.java.practice.p10.Client;
+import com.java.practice.p10.Employee;
+import com.java.practice.p10.Person;
 import com.java.practice.p6.*;
 import com.java.practice.p8.Human;
 import com.java.practice.p8.MountainBicycle;
 import com.java.practice.p8.SimpleBicycle;
 import com.java.practice.p9.Machine;
 import com.java.practice.p9.Pistol;
+import com.java.practice.p10.*;
+import com.java.practice.p9.Weapon;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Employee employee = new Employee("Oleg Dibrov", 51, "Farmer");
+        /*Employee employee = new Employee("Oleg Dibrov", 51, "Farmer");
         employee.ShowInfo();
         Space(2);
         Client client = new Client("Aleksandr Fedorov", 36, 60_000);
@@ -35,7 +40,10 @@ public class Main {
         //pm.Use();
         Space(1);
         Human soldier = new Human(america);
-        System.out.println(soldier.getCaliber());
+        System.out.println(soldier.getCaliber());*/
+
+        Weapon weapon = new Machine("M16", 5.45f);
+        System.out.println(((Machine)weapon).getCaliber());
 
     }
 
