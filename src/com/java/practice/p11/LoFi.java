@@ -8,6 +8,10 @@ public class LoFi implements Music {
         this.song = song;
     }
 
+    public String getSong() {
+        return song;
+    }
+
     @Override
     public void Play() {
         System.out.println("Playing: " + song);

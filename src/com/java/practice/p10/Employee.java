@@ -18,6 +18,11 @@ public class Employee extends Person {
     }
 
     @Override
+    public void Method() {
+        System.out.println("Emp's method");
+    }
+
+    @Override
     public void Display() {
         System.out.println(super.getName());
         System.out.println(company);

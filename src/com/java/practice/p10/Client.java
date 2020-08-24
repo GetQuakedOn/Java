@@ -18,6 +18,11 @@ public class Client extends Person {
     }
 
     @Override
+    public void Method() {
+        System.out.println("Client's method");
+    }
+
+    @Override
     public void Display() {
         System.out.println(super.getName());
         System.out.println(sum);

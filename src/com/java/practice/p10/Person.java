@@ -16,6 +16,10 @@ public class Person {
         this.name = name;
     }
 
+    public void Method() {
+        System.out.println("Person's method");
+    }
+
     public void Display() {
         System.out.println("Name: " + name);
     }
