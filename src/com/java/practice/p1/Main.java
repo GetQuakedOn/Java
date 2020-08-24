@@ -20,7 +20,12 @@ public class Main {
             System.out.println("Not instance");
         }
 
+        Space(2);
 
+        Animal animal3 = new Animal();
+        Dog dog3 = (Dog)animal3;
+
+        dog3.woof();
 
     }
 
