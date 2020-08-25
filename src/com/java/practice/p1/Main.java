@@ -1,31 +1,29 @@
 package com.java.practice.p1;
 
 import com.java.practice.p12.*;
+import com.java.practice.p10.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
         Dog dog = new Dog();
-        dog.woof();
+        //dog.woof();
         Animal animal = new Animal();
         animal = dog;
 
         if (animal instanceof Dog) {
             Dog dog2 = new Dog();
             dog2 = (Dog)animal;
-            dog2.woof();
+            //dog2.woof();
         }
         else {
-            System.out.println("Not instance");
+            //System.out.println("Not instance");
         }
 
         Space(2);
 
-        Animal animal3 = new Animal();
-        Dog dog3 = (Dog)animal3;
-
-        dog3.woof();
+        //
 
     }
 
