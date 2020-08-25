@@ -19,7 +19,7 @@ public class Employee extends Person {
 
     @Override
     public void Method() {
-        System.out.println("Emp's method");
+        System.out.println("Emp's method " + this.hashCode());
     }
 
     @Override

@@ -1,27 +1,13 @@
 package com.java.practice.p1;
 
-import com.java.practice.p12.*;
-import com.java.practice.p10.*;
+import com.java.practice.p13.Aircraft;
+import com.java.practice.p13.Boeing737;
+import com.java.practice.p13.CheckTakeoff;
+import com.java.practice.p13.Mi24;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        Dog dog = new Dog();
-        //dog.woof();
-        Animal animal = new Animal();
-        animal = dog;
-
-        if (animal instanceof Dog) {
-            Dog dog2 = new Dog();
-            dog2 = (Dog)animal;
-            //dog2.woof();
-        }
-        else {
-            //System.out.println("Not instance");
-        }
-
-        Space(2);
 
         //
 

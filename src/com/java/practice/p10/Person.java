@@ -17,7 +17,7 @@ public class Person {
     }
 
     public void Method() {
-        System.out.println("Person's method");
+        System.out.println("Person's method " + this.hashCode());
     }
 
     public void Display() {
