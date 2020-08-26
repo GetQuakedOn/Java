@@ -1,15 +1,13 @@
 package com.java.practice.p1;
 
-import com.java.practice.p13.Aircraft;
-import com.java.practice.p13.Boeing737;
-import com.java.practice.p13.CheckTakeoff;
-import com.java.practice.p13.Mi24;
+import com.java.practice.p13.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        //
+        Mi24 mi24 = new Mi24();
+        CheckAircraft.ShowAmmunition(mi24);
 
     }
 
