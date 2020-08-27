@@ -1,14 +1,30 @@
 package com.java.practice.p1;
 
-import com.java.practice.p13.*;
+import com.java.practice.p14.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Mi24 mi24 = new Mi24();
-        CheckAircraft.ShowAmmunition(mi24);
+        List<A> listA = new ArrayList<>();
 
+        listA.add(new A(1));
+        listA.add(new A(2));
+
+        List<B> listB = new ArrayList<>();
+        listB.add(new B());
+        listB.add(new B());
+
+        Test(listB);
+    }
+
+    private static void Test(List<? extends B> listAny) {
+        for (A a : listAny) {
+            System.out.println(a.toString());
+        }
     }
 
     public static void Space(int value) {
