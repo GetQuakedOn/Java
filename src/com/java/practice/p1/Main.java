@@ -9,22 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<A> listA = new ArrayList<>();
+        //
 
-        listA.add(new A(1));
-        listA.add(new A(2));
-
-        List<B> listB = new ArrayList<>();
-        listB.add(new B());
-        listB.add(new B());
-
-        Test(listB);
-    }
-
-    private static void Test(List<? extends B> listAny) {
-        for (A a : listAny) {
-            System.out.println(a.toString());
-        }
     }
 
     public static void Space(int value) {
