@@ -1,10 +1,5 @@
 package com.java.practice.p1;
 
-import com.java.practice.p14.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
