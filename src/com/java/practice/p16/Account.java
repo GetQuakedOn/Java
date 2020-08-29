@@ -24,4 +24,11 @@ public class Account implements IAccount {
     public void setName(String name) {
         this.name = name;
     }
+
+    public static void main(String[] args) {
+        IAccount<Integer> iacc = new Account(1, "name");
+        int x = iacc.getID();
+
+        System.out.println(x);
+    }
 }

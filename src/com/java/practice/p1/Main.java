@@ -8,10 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        IAccount<Integer> iacc = new Account(1, "name");
-        int x = iacc.getID();
-
-        System.out.println(x);
+        //
 
     }
 
