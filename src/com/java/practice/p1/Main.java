@@ -1,7 +1,5 @@
 package com.java.practice.p1;
 
-import java.util.ArrayList;
-import java.util.List;
 import com.java.practice.p16.*;
 
 public class Main {
