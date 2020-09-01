@@ -1,6 +1,6 @@
 package com.java.practice.p1;
 
-import com.java.practice.p16.*;
+import com.java.practice.p17.A;
 
 public class Main {
 
