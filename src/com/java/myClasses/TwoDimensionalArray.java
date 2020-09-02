@@ -5,16 +5,20 @@ import java.lang.Math;
 public class TwoDimensionalArray {
 
     private int ROW, COL;
-    private int arr[][];
+    private int[][] arr;
 
     public TwoDimensionalArray(final int ROW, final int COL) {
-        this.ROW = ROW;
-        this.COL = COL;
+        try {
+            this.ROW = ROW;
+            this.COL = COL;
 
-        arr = new int[ROW][COL];
+            arr = new int[ROW][COL];
+        } catch (Exception e) {
+            System.out.println("ROW and COL must be great than 0");
+        }
     }
 
-    //Copy
+    //C-C
     public TwoDimensionalArray(TwoDimensionalArray TDA) {
         this.ROW = TDA.ROW;
         this.COL = TDA.COL;
