@@ -1,7 +1,6 @@
 package com.java.practice.p1;
 
-import com.java.myClasses.TwoDimensionalArray;
-import com.java.practice.p15.C;
+import com.java.practice.p18.ScannerException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,11 +8,17 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ScannerException {
 
-        TwoDimensionalArray td = new TwoDimensionalArray(-3, 5);
-        td.FillArray(10);
-        td.ShowArray();
+        Scanner in = new Scanner(System.in);
+
+        while (true) {
+            int x = in.nextInt();
+
+            if (x == 0) {
+                throw new ScannerException("Scanner error!");
+            }
+        }
 
     }
 
