@@ -10,9 +10,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        A a = new A(1);
-        A b = new A(1);
-        System.out.println(a.equals(b));
+        String str1 = "text";
+        String str2 = "text";
+        System.out.println(str1.equals(str2));
 
     }
 
