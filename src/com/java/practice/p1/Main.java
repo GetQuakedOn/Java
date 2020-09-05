@@ -1,24 +1,18 @@
 package com.java.practice.p1;
 
 import com.java.practice.p18.ScannerException;
+import com.java.practice.p19.A;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws ScannerException {
+    public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
-
-        while (true) {
-            int x = in.nextInt();
-
-            if (x == 0) {
-                throw new ScannerException("Scanner error!");
-            }
-        }
+        A a = new A(1);
+        A b = new A(1);
+        System.out.println(a.equals(b));
 
     }
 
