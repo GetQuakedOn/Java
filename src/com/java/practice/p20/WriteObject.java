@@ -11,13 +11,8 @@ public class WriteObject {
                            new Person(2, "Oleg"),
                            new Person(3, "Igor")};
 
-        try {
-            FileOutputStream file = new FileOutputStream("data.bin");
-            ObjectOutputStream oos = new ObjectOutputStream(file);
-
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("data.bin"))) {
             oos.writeObject(people);
-
-            oos.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

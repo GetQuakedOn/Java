@@ -8,14 +8,9 @@ import java.util.Arrays;
 public class ReadObject {
 
     public static void main(String[] args) {
-        try {
-            FileInputStream file = new FileInputStream("data.bin");
-            ObjectInputStream ois = new ObjectInputStream(file);
-
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("data.bin"))) {
             Person[] people = (Person[])ois.readObject();
             System.out.println(Arrays.toString(people));
-
-            ois.close();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
