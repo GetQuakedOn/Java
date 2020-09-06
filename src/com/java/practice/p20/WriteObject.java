@@ -15,11 +15,7 @@ public class WriteObject {
             FileOutputStream file = new FileOutputStream("data.bin");
             ObjectOutputStream oos = new ObjectOutputStream(file);
 
-            oos.writeInt(people.length);
-
-            for (Person person : people) {
-                oos.writeObject(person);
-            }
+            oos.writeObject(people);
 
             oos.close();
         } catch (IOException e) {

@@ -3,6 +3,7 @@ package com.java.practice.p20;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.util.Arrays;
 
 public class ReadObject {
 
@@ -11,15 +12,8 @@ public class ReadObject {
             FileInputStream file = new FileInputStream("data.bin");
             ObjectInputStream ois = new ObjectInputStream(file);
 
-            Person[] people = new Person[ois.readInt()];
-
-            for (int i = 0; i < ois.readInt(); i++) {
-                people[i] = (Person)ois.readObject();
-            }
-
-            for (Person person : people) {
-                System.out.println(person);
-            }
+            Person[] people = (Person[])ois.readObject();
+            System.out.println(Arrays.toString(people));
 
             ois.close();
         } catch (IOException | ClassNotFoundException e) {
