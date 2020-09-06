@@ -1,18 +1,16 @@
 package com.java.practice.p1;
 
-import com.java.practice.p18.ScannerException;
-import com.java.practice.p19.A;
+import com.java.practice.p20.Person;
 
-import java.io.File;
-import java.util.Scanner;
+import java.io.IOException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        String str1 = "text";
-        String str2 = "text";
-        System.out.println(str1.equals(str2));
+        //
 
     }
 
