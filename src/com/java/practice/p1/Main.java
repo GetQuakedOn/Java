@@ -1,10 +1,6 @@
 package com.java.practice.p1;
 
-import com.java.practice.p20.Person;
-
-import java.io.IOException;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
+import java.util.Date;
 
 public class Main {
 
