@@ -13,8 +13,8 @@ public class TwoDimensionalArray {
             this.COL = COL;
 
             arr = new int[ROW][COL];
-        } catch (Exception e) {
-            System.out.println("ROW and COL must be great than 0");
+        } catch (NegativeArraySizeException e) {
+            System.err.println("ROW and COL must be great than 0");
         }
     }
 
