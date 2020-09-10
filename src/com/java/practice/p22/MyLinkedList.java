@@ -2,14 +2,14 @@ package com.java.practice.p22;
 
 import java.util.Arrays;
 
-public class MyLinkedList {
+public class MyLinkedList<T> {
 
-    private Node head;
+    private Node<T> head;
     private int size = 0;
 
-    public void add(int value) {
+    public void add(T value) {
         if (head == null) {
-            this.head = new Node(value);
+            this.head = new Node<T>(value);
         } else {
             Node temp = this.head;
 
@@ -17,19 +17,19 @@ public class MyLinkedList {
                 temp = temp.getNext();
             }
 
-            temp.setNext(new Node(value));
+            temp.setNext(new Node<T>(value));
         }
         size++;
     }
 
-    public void add(int index, int value) {
+    public void add(int index, T value) {
         int idx = 0;
-        Node temp = head;
+        Node<T> temp = head;
 
         while (temp != null) {
             if ((idx + 1) == index) {
-                Node nextNode = temp.getNext();
-                Node newNode = new Node(value);
+                Node<T> nextNode = temp.getNext();
+                Node<T> newNode = new Node<>(value);
                 temp.setNext(newNode);
                 newNode.setNext(nextNode);
                 size++;
@@ -41,9 +41,9 @@ public class MyLinkedList {
         }
     }
 
-    public int get(int index) {
+    public T get(int index) {
         int idx = 0;
-        Node temp = head;
+        Node<T> temp = head;
 
         while (temp != null) {
             if (idx == index) {
@@ -58,7 +58,7 @@ public class MyLinkedList {
 
     public void remove(int index) {
         int idx = 0;
-        Node temp = head;
+        Node<T> temp = head;
 
         while (temp != null) {
             if ((idx + 1) == index) {
@@ -74,9 +74,9 @@ public class MyLinkedList {
 
     @Override
     public String toString() {
-        int[] result = new int[size];
+        Object[] result = new Object[size];
         int idx = 0;
-        Node temp = this.head;
+        Node<T> temp = this.head;
 
         while (temp != null) {
             result[idx++] = temp.getValue();
@@ -86,27 +86,27 @@ public class MyLinkedList {
         return Arrays.toString(result);
     }
 
-    private static class Node {
-        private int value;
-        private Node next;
+    private static class Node<T> {
+        private T value;
+        private Node<T> next;
 
-        public Node(int value) {
+        public Node(T value) {
             this.value = value;
         }
 
-        public int getValue() {
+        public T getValue() {
             return value;
         }
 
-        public void setValue(int value) {
+        public void setValue(T value) {
             this.value = value;
         }
 
-        public Node getNext() {
+        public Node<T> getNext() {
             return next;
         }
 
-        public void setNext(Node next) {
+        public void setNext(Node<T> next) {
             this.next = next;
         }
     }
