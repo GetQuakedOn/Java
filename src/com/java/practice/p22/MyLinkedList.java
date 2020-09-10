@@ -23,6 +23,16 @@ public class MyLinkedList<T> {
     }
 
     public void add(int index, T value) {
+        if (index == 0) {
+            Node<T> oldHead = head;
+            Node<T> newHead = new Node<>(value);
+            newHead.setNext(oldHead);
+            newHead.setValue(value);
+            head = newHead;
+            size++;
+            return;
+        }
+
         int idx = 0;
         Node<T> temp = head;
 
@@ -57,6 +67,12 @@ public class MyLinkedList<T> {
     }
 
     public void remove(int index) {
+        if (index == 0) {
+            this.head = head.getNext();
+            size--;
+            return;
+        }
+
         int idx = 0;
         Node<T> temp = head;
 
