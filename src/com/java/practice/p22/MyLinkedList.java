@@ -19,8 +19,57 @@ public class MyLinkedList {
 
             temp.setNext(new Node(value));
         }
-
         size++;
+    }
+
+    public void add(int index, int value) {
+        int idx = 0;
+        Node temp = head;
+
+        while (temp != null) {
+            if ((idx + 1) == index) {
+                Node nextNode = temp.getNext();
+                Node newNode = new Node(value);
+                temp.setNext(newNode);
+                newNode.setNext(nextNode);
+                size++;
+                return;
+            } else {
+                temp = temp.getNext();
+                idx++;
+            }
+        }
+    }
+
+    public int get(int index) {
+        int idx = 0;
+        Node temp = head;
+
+        while (temp != null) {
+            if (idx == index) {
+                return temp.getValue();
+            } else {
+                temp = temp.getNext();
+                idx++;
+            }
+        }
+        throw new NegativeArraySizeException();
+    }
+
+    public void remove(int index) {
+        int idx = 0;
+        Node temp = head;
+
+        while (temp != null) {
+            if ((idx + 1) == index) {
+                temp.setNext(temp.getNext().getNext());
+                size--;
+                return;
+            } else {
+                temp = temp.getNext();
+                idx++;
+            }
+        }
     }
 
     @Override
@@ -61,5 +110,4 @@ public class MyLinkedList {
             this.next = next;
         }
     }
-
 }
