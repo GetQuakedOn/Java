@@ -7,24 +7,27 @@
 
 package com.java.practice.p23;
 
+import java.util.LinkedList;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class StartGame {
+public class TwentyOnePoint {
     private static final int COUNT = 5;
     private static boolean game = true;
     private static int userScore, compScore;
     private static List<Integer> deck;
+    private static List<String> suits;
     private static Scanner in;
 
     // Run this main ------------------------------------
     public static void main(String[] args) {
-        deck = new ArrayList<>();
+        deck = new LinkedList<>();
+        suits = new LinkedList<>();
         in = new Scanner(System.in);
         FillDeck(deck);
-        userScore = (int)(Math.random() * COUNT);
-        compScore = (int)(Math.random() * COUNT);
+        FillSuits(suits);
+        userScore = deck.get((int)(Math.random() * COUNT));
+        compScore = deck.get((int)(Math.random() * COUNT));
 
         info();
         while (game) {
@@ -61,6 +64,7 @@ public class StartGame {
                 case 1:
                     int random = (int)(Math.random() * COUNT);
                     userScore += deck.get(random);
+                    System.out.println("Вы взяли карту: " + suits.get(random));
                     random = (int)(Math.random() * COUNT);
                     compScore += deck.get(random);
                     break;
@@ -96,5 +100,13 @@ public class StartGame {
         //deck.add(9);
         deck.add(10);
         deck.add(11);
+    }
+
+    public static void FillSuits(List<String> suits) {
+        suits.add("Валет");
+        suits.add("Дама");
+        suits.add("Король");
+        suits.add("Десятка");
+        suits.add("Туз");
     }
 }
