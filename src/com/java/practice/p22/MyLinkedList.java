@@ -88,6 +88,15 @@ public class MyLinkedList<T> {
         }
     }
 
+    public int size() {
+        return this.size;
+    }
+
+    public void clear() {
+        this.head = null;
+        this.size = 0;
+    }
+
     @Override
     public String toString() {
         Object[] result = new Object[size];
