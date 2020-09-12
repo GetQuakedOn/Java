@@ -1,7 +1,7 @@
 /**
  *
  * @author NGINX
- * @version 1.2
+ * @version 1.4
  *
  */
 
@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class TwentyOnePoint {
     private static final int COUNT = 5;
     private static boolean inGame = true;
+    private static boolean restartGame = true;
     private static int userScore, compScore;
     private static List<Integer> deck;
     private static List<String> suits;
@@ -26,14 +27,17 @@ public class TwentyOnePoint {
         in = new Scanner(System.in);
         FillDeck(deck);
         FillSuits(suits);
-        userScore = deck.get((int)(Math.random() * COUNT));
-        compScore = deck.get((int)(Math.random() * COUNT));
 
-        info();
-        while (inGame) {
-            move();
+        while (restartGame) {
+            userScore = deck.get((int) (Math.random() * COUNT));
+            compScore = deck.get((int) (Math.random() * COUNT));
+
+            info();
+            while (inGame) {
+                move();
+            }
+            isRestartGame();
         }
-        in.close();
     }
     // --------------------------------------------------
 
@@ -44,6 +48,12 @@ public class TwentyOnePoint {
     public static void score() {
         System.out.println("--- Ваш счет: " + userScore + "\n" +
                            "--- Счет ИИ: " + compScore);
+    }
+
+    public static void isRestartGame() {
+        System.out.println("\nНачать заново?" + "\t" + "1 / 0");
+        int answer = in.nextInt();
+        inGame = restartGame = (answer == 1);
     }
 
     public static void move() {
@@ -65,19 +75,31 @@ public class TwentyOnePoint {
                     int random = (int)(Math.random() * COUNT);
                     userScore += deck.get(random);
                     System.out.println("Вы взяли карту: " + suits.get(random));
-                    random = (int)(Math.random() * COUNT);
-                    compScore += deck.get(random);
+
+                    if (compScore < 18) {
+                        random = (int)(Math.random() * COUNT);
+                        compScore += deck.get(random);
+                    }
                     break;
 
                 case 0:
+                    while (compScore < 18) {
+                        random = (int)(Math.random() * COUNT);
+                        compScore += deck.get(random);
+                        System.err.println("Компьютер берет еще одну карту...");
+                    }
+
                     if (userScore > compScore) {
-                        System.out.println("Вы выиграли!");
+                        System.out.println("\nВы выиграли!");
                         score();
                     } else if (userScore == compScore) {
-                        System.out.println("Ничья.");
+                        System.out.println("\nНичья.");
+                        score();
+                    } else if (userScore < compScore && compScore <= 21){
+                        System.out.println("\nВы проиграли.");
                         score();
                     } else {
-                        System.out.println("Вы проиграли.");
+                        System.out.println("\nВы выиграли!");
                         score();
                     }
                     inGame = false;
