@@ -1,7 +1,7 @@
 /**
  *
  * @author NGINX
- * @version 1.1
+ * @version 1.2
  *
  */
 
@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class TwentyOnePoint {
     private static final int COUNT = 5;
-    private static boolean game = true;
+    private static boolean inGame = true;
     private static int userScore, compScore;
     private static List<Integer> deck;
     private static List<String> suits;
@@ -30,7 +30,7 @@ public class TwentyOnePoint {
         compScore = deck.get((int)(Math.random() * COUNT));
 
         info();
-        while (game) {
+        while (inGame) {
             move();
         }
         in.close();
@@ -50,11 +50,11 @@ public class TwentyOnePoint {
         if (userScore > 21) {
             System.out.println("Вы проиграли.");
             score();
-            game = false;
+            inGame = false;
         } else if (compScore > 21) {
             System.out.println("Вы выиграли!");
             score();
-            game = false;
+            inGame = false;
         } else {
             System.out.println("Ваш счет: " + userScore);
             System.out.println("1. Взять еще одну" + "\t" + "0. Вскрыться" + "\n");
@@ -80,7 +80,7 @@ public class TwentyOnePoint {
                         System.out.println("Вы проиграли.");
                         score();
                     }
-                    game = false;
+                    inGame = false;
                     break;
 
                 default:
