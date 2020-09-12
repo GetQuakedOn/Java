@@ -163,7 +163,7 @@ public class TwentyOnePoint {
         deck.add(10);
         deck.add(11);
 
-//        Uncomment this 'for' with next line and comment lines (116 - 120)
+//        Uncomment this 'for' with next line and comment lines (160 - 164)
 //        if you want to play with 9 suits
 
 //        for (int i = 2; i <= 11; i++) {
@@ -176,7 +176,7 @@ public class TwentyOnePoint {
         suits.add("Валет");
         suits.add("Дама");
         suits.add("Король");
-//        suits.add("Шестерка");  //and this items
+//        suits.add("Шестерка");  //and uncomment this items too
 //        suits.add("Семерка");   //!Don't forget about COUNT! (change to 9)
 //        suits.add("Восьмерка");
 //        suits.add("Девятка");
