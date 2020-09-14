@@ -1,17 +1,20 @@
 package com.java.practice.p1;
 
-import com.java.practice.p22.MyLinkedList;
+import java.util.*;
+import com.java.practice.p24.Person;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        MyLinkedList myLinkedList = new MyLinkedList();
-        myLinkedList.add(1);
-        myLinkedList.add(2);
-        myLinkedList.add(3);
+        Person p1 = new Person(1, "Ale1x");
+        Person p2 = new Person(1, "Alex");
+        Set<Person> set = new HashSet<>();
 
-        System.out.println(myLinkedList);
+        set.add(p1);
+        set.add(p2);
+
+        System.out.println(set);
 
     }
 
