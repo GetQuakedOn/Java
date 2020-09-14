@@ -1,5 +1,6 @@
 package com.java.practice.p20;
 
+import java.io.FileInputStream;
 import java.io.Serializable;
 
 public class Person implements Serializable {
