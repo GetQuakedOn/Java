@@ -1,7 +1,5 @@
 package com.java.practice.p25;
 
-import com.java.practice.p1.Main;
-
 import java.util.*;
 
 public class Sort {
@@ -23,16 +21,13 @@ public class Sort {
             }
         });
 
-        System.out.println(nums);
-        Main.Space(2);
-
-        List<Person> human = new ArrayList<>();
+        Set<Person> human = new TreeSet<>();
+        human.add(new Person(2));
+        human.add(new Person(1));
         human.add(new Person(3));
         human.add(new Person(1));
-        human.add(new Person(6));
         human.add(new Person(4));
 
-        Collections.sort(human, new PersonSort());
         System.out.println(human);
     }
 }
