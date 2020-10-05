@@ -2,8 +2,8 @@ package com.java.practice.p26;
 
 import com.java.practice.p1.Main;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class Person {
     private int id;
@@ -20,21 +20,15 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person person1 = new Person(1);
-        Person person2 = new Person(2);
-        Person person3 = new Person(3);
-        Person person4 = new Person(4);
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
 
-        Queue<Person> queue = new LinkedList<>();
-        queue.add(person3);
-        queue.add(person2);
-        queue.add(person4);
-        queue.add(person1);
-
-        Main.Space(1);
-
-        for (Person human : queue) {
-            System.out.println(human.toString());
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next().toString());
         }
     }
 }

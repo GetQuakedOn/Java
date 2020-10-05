@@ -17,7 +17,7 @@ public class PrizeWinners {
                 winers[i] = random;
             } else {
                 i -= 1;
-                random = (int) ((Math.random() * humans) + 1);
+                random = (int)((Math.random() * humans) + 1);
             }
 
             random = (int)((Math.random() * humans) + 1);
@@ -29,9 +29,7 @@ public class PrizeWinners {
 
     public static boolean isRepeat(int[] array, int count) {
         boolean bool = false;
-        for (int i : array) {
-            bool |= (i == count);
-        }
+        for (int i : array) bool |= (i == count);
         return bool;
     }
 }
