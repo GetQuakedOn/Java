@@ -16,7 +16,7 @@ public class PrizeWinners {
             if (!isRepeat(winers, random)) {
                 winers[i] = random;
             } else {
-                i -= 1;
+                i--;
                 random = (int)((Math.random() * humans) + 1);
             }
 
