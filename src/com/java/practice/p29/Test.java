@@ -12,10 +12,12 @@ public class Test {
 
 class Worker {
     private Random random = new Random();
-    private Object lock1 = new Object();
-    private Object lock2 = new Object();
+
     private List<Integer> list1 = new ArrayList<>();
     private List<Integer> list2 = new ArrayList<>();
+
+    private Object lock1 = new Object();
+    private Object lock2 = new Object();
 
     public void addToList1() {
         synchronized (lock1) {
@@ -29,7 +31,7 @@ class Worker {
         }
     }
 
-    public synchronized void addToList2() {
+    public void addToList2() {
         synchronized (lock2) {
             try {
                 Thread.sleep(1);
@@ -37,11 +39,11 @@ class Worker {
                 e.printStackTrace();
             }
 
-            list2.add(random.nextInt(100));
+            list2.add(random.nextInt());
         }
     }
 
-    public void work() {
+    public void doWork() {
         for (int i = 0; i < 1000; i++) {
             addToList1();
             addToList2();
@@ -54,14 +56,14 @@ class Worker {
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                work();
+                doWork();
             }
         });
 
         Thread thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                work();
+                doWork();
             }
         });
 
@@ -77,8 +79,7 @@ class Worker {
 
         long after = System.currentTimeMillis();
         System.out.println(after - before);
-
-        System.out.println("List1: " + list1.size());
-        System.out.println("List2: " + list2.size());
+        System.out.println(list1.size());
+        System.out.println(list2.size());
     }
 }
